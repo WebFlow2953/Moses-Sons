@@ -766,6 +766,24 @@
         .footer-tagline { color: var(--gold-soft); font-style: italic; font-family: 'Playfair Display', serif; margin-bottom: 12px; }
         .copyright { font-size: 0.82rem; color: var(--muted); }
 
+        /* Footer credit styling */
+        .site-credit {
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        .site-credit a {
+            color: var(--gold-soft);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 700;
+        }
+
+        .site-credit a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
         /* ============ SOCIAL FLOAT ============ */
         .social-float {
             position: fixed;
@@ -839,6 +857,21 @@
             .booking-form .form-row { grid-template-columns: 1fr; }
             .booking-form-wrap { padding: 40px 30px; }
             .gallery-container { grid-template-columns: 1fr; }
+        }
+
+        /* Mobile responsiveness for credit */
+        @media (max-width: 600px) {
+            .copyright {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4px;
+            }
+            
+            .site-credit {
+                margin-top: 2px;
+                font-size: 0.78rem;
+            }
         }
     </style>
 </head>
@@ -1182,7 +1215,10 @@
         </div>
         <div class="footer-bottom">
             <p class="footer-tagline">"Izandla Ziyagezana"</p>
-            <p class="copyright">&copy; 2024 Moses &amp; Sons Photography. All Rights Reserved.</p>
+            <p class="copyright">
+                &copy; 2024 Moses &amp; Sons Photography. All Rights Reserved.
+                <span class="site-credit">| Site by <a href="https://asande-mbhense.vercel.app/" target="_blank" rel="noopener noreferrer">Asande Mbhense</a></span>
+            </p>
         </div>
     </footer>
 
